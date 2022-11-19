@@ -6,22 +6,29 @@ namespace DiagramAnalysisTest
     /// <summary>
     /// Responsible for displaying the area for a number of shapes.
     /// </summary>
-    public class AreaDisplay
+    public class AreaDisplay : Interfaces.IDisplay
     {
+        private readonly IWriter displayWriter;
+
+        public AreaDisplay(IWriter writer)
+        {
+            displayWriter = writer;
+        }
+
+        public IWriter Writer { get => displayWriter; }
+
         /// <summary>
         /// Prints the areas of objects which implement <see cref="IShape"/>.
         /// </summary>
         /// <param name="shapes">A <see cref="object[]"/> containing shapes to display the area for.</param>
-        /// <returns><see cref="ValueTask"/></returns>
+        /// <returns><see cref="Task"/></returns>
         public async ValueTask DisplayAsync(params object[] shapes)
         {
             foreach (var shape in shapes)
             {
-                var printer = new Printer();
-
-                if (shape is IShape s)
+                if (shape is Interfaces.IShape s)
                 {
-                    await printer.PrintAsync(s.Area.ToString());
+                    await displayWriter.WriteAsync($"{s.Area}");
                 }
             }
         }
