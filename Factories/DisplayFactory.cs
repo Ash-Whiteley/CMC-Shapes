@@ -1,7 +1,7 @@
-﻿using DiagramAnalysisTest.Interfaces;
+﻿using ShapesTest.Interfaces;
 using ShapesTest.Shapes.Helpers;
 
-namespace DiagramAnalysisTest.Factories
+namespace ShapesTest.Factories
 {
     /// <summary>
     /// Factory responsible for creating classes that display information

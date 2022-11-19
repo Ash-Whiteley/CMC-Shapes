@@ -1,4 +1,4 @@
-﻿namespace DiagramAnalysisTest.Interfaces
+﻿namespace ShapesTest.Interfaces
 {
     public interface IWriterSync
     {

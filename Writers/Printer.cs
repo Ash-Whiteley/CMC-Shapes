@@ -1,4 +1,4 @@
-﻿using DiagramAnalysisTest.Interfaces;
+﻿using ShapesTest.Interfaces;
 using System.Diagnostics;
 using System.Threading.Tasks;
 

@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using DiagramAnalysisTest.Interfaces;
+using ShapesTest.Interfaces;
 
 namespace ShapesTest.Shapes.Helpers
 {

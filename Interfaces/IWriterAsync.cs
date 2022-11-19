@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace DiagramAnalysisTest.Interfaces
+namespace ShapesTest.Interfaces
 {
     public interface IWriterAsync
     {

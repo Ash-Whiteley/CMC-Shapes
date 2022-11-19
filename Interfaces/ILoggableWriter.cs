@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DiagramAnalysisTest.Interfaces
+namespace ShapesTest.Interfaces
 {
     public interface ILoggableWriter : IWriter
     {

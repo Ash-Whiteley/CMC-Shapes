@@ -1,6 +1,6 @@
-﻿using DiagramAnalysisTest.Shapes;
+﻿using ShapesTest.Shapes;
 
-namespace DiagramAnalysisTest.Factories
+namespace ShapesTest.Factories
 {
     /// <summary>
     /// Responsible for displaying the area for a number of shapes.

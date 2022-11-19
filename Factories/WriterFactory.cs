@@ -1,6 +1,6 @@
 ﻿using ShapesTest.Writers;
 
-namespace DiagramAnalysisTest.Factories
+namespace ShapesTest.Factories
 {
     /// <summary>
     /// Factory responsible for creating a number of different writer classes

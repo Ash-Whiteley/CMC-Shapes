@@ -1,4 +1,4 @@
-﻿namespace DiagramAnalysisTest.Shapes
+﻿namespace ShapesTest.Shapes
 {
     public class Square : Interfaces.IShape
     {

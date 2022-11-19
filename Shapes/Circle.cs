@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DiagramAnalysisTest.Shapes
+namespace ShapesTest.Shapes
 {
     public class Circle : Interfaces.IShape
     {
