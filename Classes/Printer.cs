@@ -1,22 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace DiagramAnalysisTest
+namespace DiagramAnalysisTest.Classes
 {
-    public class Printer
+    public class Printer : Interfaces.IWriter
     {
-        public void Print(string message)
+        /// <summary>
+        /// Print a message to the console synchronously.
+        /// </summary>
+        /// <param name="message">A <see cref="string"/> message to display in the console.</param>
+        public virtual void Write(string message)
         {
-            // this would go to a printer, but for demo purposes, we write to the Debug console
+            // This would go to a printer, but for demo purposes, we write to the Debug console
             Debug.WriteLine(message);
         }
 
-        public async Task PrintAsync(string message)
+        /// <summary>
+        /// Print a message to the console asynchronously.
+        /// </summary>
+        /// <param name="message">A <see cref="string"/> message to display in the console.</param>
+        /// <returns><see cref="Task"/> representing the asynchronous operation.</returns>
+        public async ValueTask WriteAsync(string message)
         {
-            await Task.Run(() => Print(message));
+            await Task.Run(() => Write(message));
         }
     }
 }
