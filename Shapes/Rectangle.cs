@@ -1,9 +1,18 @@
-﻿namespace DiagramAnalysisTest
+﻿namespace DiagramAnalysisTest.Shapes
 {
-    public class Rectangle
+    public class Rectangle : Interfaces.IShape
     {
-        public virtual decimal Height { get; set; }
-        public virtual decimal Width { get; set; }
-        public virtual decimal Area => Height * Width;
+        /// <summary>
+        /// Gets or sets a value indicating the <see cref="decimal"/> height of the rectangle.
+        /// </summary>
+        public decimal Height { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating the <see cref="decimal"/> width of the rectangle.
+        /// </summary>
+        public decimal Width { get; set; }
+
+        /// <inheritdoc/>
+        public decimal Area => Height * Width;
     }
 }

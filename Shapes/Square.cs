@@ -1,32 +1,13 @@
-﻿namespace DiagramAnalysisTest
+﻿namespace DiagramAnalysisTest.Shapes
 {
-    public class Square : Rectangle
+    public class Square : Interfaces.IShape
     {
-        private decimal height;
-        private decimal width;
-        public override decimal Height
-        {
-            get
-            {
-                return height;
-            }
-            set
-            {
-                height = value;
-                width = value;
-            }
-        }
-        public override decimal Width
-        {
-            get
-            {
-                return width;
-            }
-            set
-            {
-                width = value;
-                height = value;
-            }
-        }
+        /// <summary>
+        /// Gets a value indicating the length of the square for each side.
+        /// </summary>
+        public decimal Length { get; set; }
+
+        /// <inheritdoc/>
+        public decimal Area => Length * Length;
     }
 }
