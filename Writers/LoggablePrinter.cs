@@ -1,7 +1,7 @@
 ﻿using DiagramAnalysisTest.Interfaces;
 using System.Collections.Generic;
 
-namespace DiagramAnalysisTest.Classes
+namespace ShapesTest.Writers
 {
     public class LoggablePrinter : Printer, ILoggableWriter
     {

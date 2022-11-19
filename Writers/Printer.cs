@@ -1,9 +1,10 @@
-﻿using System.Diagnostics;
+﻿using DiagramAnalysisTest.Interfaces;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace DiagramAnalysisTest.Classes
+namespace ShapesTest.Writers
 {
-    public class Printer : Interfaces.IWriter
+    public class Printer : IWriter
     {
         /// <summary>
         /// Print a message to the console synchronously.
