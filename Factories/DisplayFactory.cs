@@ -3,7 +3,7 @@
 namespace DiagramAnalysisTest.Factories
 {
     /// <summary>
-    /// Responsible for displaying the area for a number of shapes.
+    /// Factory responsible for creating classes that display information
     /// </summary>
     public static class DisplayFactory
     {

@@ -3,13 +3,18 @@
 namespace DiagramAnalysisTest.Factories
 {
     /// <summary>
-    /// Responsible for displaying the area for a number of shapes.
+    /// Factory responsible for creating a number of different writer classes
     /// </summary>
     public static class WriterFactory
     {
         public static Printer CreatePrinter()
         {
             return new Printer();
+        }
+
+        public static Printer CreateLoggablePrinter()
+        {
+            return new LoggablePrinter();
         }
     }
 }
