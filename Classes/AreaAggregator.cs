@@ -1,50 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DiagramAnalysisTest
+﻿namespace DiagramAnalysisTest
 {
+    /// <summary>
+    /// Responsible for aggregating the area for a number of shapes.
+    /// </summary>
     public static class AreaAggregator
     {
+        /// <summary>
+        /// Calculates the sum of objects provided that implement <see cref="Interfaces.IShape"/>.
+        /// </summary>
+        /// <param name="shapes"></param>
+        /// <returns>A <see cref="decimal"/> representing the area of the shapes.</returns>
         public static decimal SumArea(params object[] shapes)
         {
-            decimal retVal = 0;
+            var retVal = 0M;
 
             foreach (var shape in shapes)
             {
-                if (shape is Rectangle)
+                // Detect if the object is a valid shape.
+                if (shape is Interfaces.IShape s)
                 {
-                    retVal += ((Rectangle)shape).Area;
-                }
-
-                if (shape is Circle)
-                {
-                    retVal += ((Circle)shape).Area;
+                    retVal += s.Area;
                 }
             }
 
             return retVal;
         }
-
-        public static async Task PrintAreasAsync(params object[] shapes)
-        {
-
-            foreach (var shape in shapes)
-            {
-                var printer = new Printer();
-
-                if (shape is Rectangle)
-                {
-                    await printer.PrintAsync(((Rectangle)shape).Area.ToString());
-                }
-
-                if (shape is Circle)
-                {
-                    await printer.PrintAsync(((Circle)shape).Area.ToString());
-                }
-            }
-        }
-
     }
 }
