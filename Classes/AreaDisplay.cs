@@ -8,20 +8,20 @@ namespace DiagramAnalysisTest
     /// </summary>
     public class AreaDisplay
     {
+        /// <summary>
+        /// Prints the areas of objects which implement <see cref="IShape"/>.
+        /// </summary>
+        /// <param name="shapes">A <see cref="object[]"/> containing shapes to display the area for.</param>
+        /// <returns><see cref="ValueTask"/></returns>
         public async ValueTask DisplayAsync(params object[] shapes)
         {
             foreach (var shape in shapes)
             {
                 var printer = new Printer();
 
-                if (shape is Rectangle)
+                if (shape is IShape s)
                 {
-                    await printer.PrintAsync(((Rectangle)shape).Area.ToString());
-                }
-
-                if (shape is Circle)
-                {
-                    await printer.PrintAsync(((Circle)shape).Area.ToString());
+                    await printer.PrintAsync(s.Area.ToString());
                 }
             }
         }
