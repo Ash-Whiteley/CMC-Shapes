@@ -1,4 +1,4 @@
-﻿using DiagramAnalysisTest.Classes;
+﻿using ShapesTest.Writers;
 
 namespace DiagramAnalysisTest.Factories
 {
