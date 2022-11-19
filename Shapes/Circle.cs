@@ -7,7 +7,7 @@ namespace ShapesTest.Shapes
         private decimal radius;
 
         /// <summary>
-        /// Gets or sets a value denoting the radius of the circular shape.
+        /// Gets or sets a value denoting the <see cref="decimal"/> radius of the circular shape.
         /// </summary>
         public decimal Radius
         {

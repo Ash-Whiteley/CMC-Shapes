@@ -5,7 +5,7 @@
         private decimal length;
 
         /// <summary>
-        /// Gets a value indicating the length of the square for each side.
+        /// Gets a value indicating the <see cref="decimal"/> length of the square for each side.
         /// </summary>
         public decimal Length 
         {

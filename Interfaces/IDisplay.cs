@@ -8,7 +8,7 @@ namespace ShapesTest.Interfaces
         /// Asynchronously display a list of objects.
         /// </summary>
         /// <param name="obj">The list of objects to display.</param>
-        /// <returns><see cref="Task"/></returns>
+        /// <returns><see cref="ValueTask"/></returns>
         ValueTask DisplayAsync(params object[] obj);
     }
 }
