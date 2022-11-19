@@ -1,4 +1,6 @@
-﻿namespace DiagramAnalysisTest
+﻿using DiagramAnalysisTest.Interfaces;
+
+namespace ShapesTest.Shapes.Helpers
 {
     /// <summary>
     /// Responsible for aggregating the area for a number of shapes.
@@ -17,7 +19,7 @@
             foreach (var shape in shapes)
             {
                 // Detect if the object is a valid shape.
-                if (shape is Interfaces.IShape s)
+                if (shape is IShape s)
                 {
                     areaTotal += s.Area;
                 }

@@ -1,12 +1,12 @@
 ﻿using System.Threading.Tasks;
 using DiagramAnalysisTest.Interfaces;
 
-namespace DiagramAnalysisTest
+namespace ShapesTest.Shapes.Helpers
 {
     /// <summary>
     /// Responsible for displaying the area for a number of shapes.
     /// </summary>
-    public class AreaDisplay : Interfaces.IDisplay
+    public class AreaDisplay : IDisplay
     {
         private readonly IWriter displayWriter;
 
@@ -26,7 +26,7 @@ namespace DiagramAnalysisTest
         {
             foreach (var shape in shapes)
             {
-                if (shape is Interfaces.IShape s)
+                if (shape is IShape s)
                 {
                     await displayWriter.WriteAsync($"{s.Area}");
                 }

@@ -1,4 +1,5 @@
 ﻿using DiagramAnalysisTest.Interfaces;
+using ShapesTest.Shapes.Helpers;
 
 namespace DiagramAnalysisTest.Factories
 {
