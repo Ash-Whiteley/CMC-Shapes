@@ -12,18 +12,18 @@
         /// <returns>A <see cref="decimal"/> representing the area of the shapes.</returns>
         public static decimal SumArea(params object[] shapes)
         {
-            var retVal = 0M;
+            var areaTotal = 0M;
 
             foreach (var shape in shapes)
             {
                 // Detect if the object is a valid shape.
                 if (shape is Interfaces.IShape s)
                 {
-                    retVal += s.Area;
+                    areaTotal += s.Area;
                 }
             }
 
-            return retVal;
+            return areaTotal;
         }
     }
 }
